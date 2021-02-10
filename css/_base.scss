@@ -46,8 +46,11 @@ body {
  * while also taking the chat size into consideration.
 */
 @media (min-width: 581px) {
-    .shift-right .atlaskit-portal > div:not(.Tooltip) {
+    /* .shift-right .atlaskit-portal > div:not(.Tooltip) {
         padding-left: $sidebarWidth;
+    } */
+    .hoffi-shift-left .atlaskit-portal > div:not(.Tooltip) {
+        padding-right: $sidebarWidth;
     }
 }
 
@@ -110,7 +113,10 @@ form {
 }
 
 .watermark {
-    display: block;
+    /* Hoffi */
+    display: none;
+
+    /* display: block; */
     position: absolute;
     top: 15;
     width: $watermarkWidth;

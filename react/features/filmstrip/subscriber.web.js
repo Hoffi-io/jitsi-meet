@@ -107,10 +107,12 @@ StateListenerRegistry.register(
 
         if (isChatOpen) {
             // $FlowFixMe
-            document.body.classList.add('shift-right');
+            // document.body.classList.add('shift-right');
+            document.body.classList.add('hoffi-shift-left');
         } else {
             // $FlowFixMe
-            document.body.classList.remove('shift-right');
+            // document.body.classList.remove('shift-right');
+            document.body.classList.remove('hoffi-shift-left');
         }
 
         if (shouldDisplayTileView(state)) {

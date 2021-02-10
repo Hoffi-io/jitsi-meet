@@ -63,7 +63,8 @@ class LargeVideo extends Component<Props> {
      */
     render() {
         const style = this._getCustomSyles();
-        const className = `videocontainer${this.props._isChatOpen ? ' shift-right' : ''}`;
+        // const className = `videocontainer${this.props._isChatOpen ? ' shift-right' : ''}`;
+        const className = `videocontainer${this.props._isChatOpen ? ' hoffi-shift-left' : ''}`;
 
         return (
             <div
@@ -122,8 +123,9 @@ class LargeVideo extends Component<Props> {
 
         styles.backgroundColor = _customBackgroundColor || interfaceConfig.DEFAULT_BACKGROUND;
 
-        if (_customBackgroundImageUrl) {
-            styles.backgroundImage = `url(${_customBackgroundImageUrl})`;
+        if (_customBackgroundImageUrl ) {
+            /* Hoffi */
+            styles.backgroundImage = `linear-gradient(to bottom, rgba(14, 8, 33, 0.65) 0%, rgba(14, 8, 33, 0) 100%), url(${_customBackgroundImageUrl})`;
             styles.backgroundSize = 'cover';
         }
 

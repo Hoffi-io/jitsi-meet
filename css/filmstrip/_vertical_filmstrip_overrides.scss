@@ -2,7 +2,10 @@
  * Rotate the hide filmstrip icon so it points towards the right edge
  * of the screen.
  */
-.vertical-filmstrip .filmstrip__toolbar {
+ .vertical-filmstrip .filmstrip__toolbar {
+    /* Hoffi */
+    display: none;
+    
     transform: rotate(-90deg);
 }
 
@@ -95,15 +98,27 @@
  */
 .vertical-filmstrip .large-video-labels {
     &.with-filmstrip {
+        /* Hoffi */
+        opacity: 0;
+        pointer-events: none;
+
         right: 150px;
     }
 
     &.with-filmstrip.opening {
+        /* Hoffi */
+        opacity: 0;
+        pointer-events: none;
+
         transition: 0.9s;
         transition-timing-function: ease-in-out;
     }
 
     &.without-filmstrip {
+        /* Hoffi */
+        opacity: 0;
+        pointer-events: none;
+
         transition: 1.2s ease-in-out;
         transition-delay: 0.1s;
     }

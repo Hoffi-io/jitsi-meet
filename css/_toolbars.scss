@@ -43,8 +43,12 @@
     }
 
     @media (min-width: 581px) {
-        &.shift-right {
+        /* &.shift-right {
             margin-left: $sidebarWidth;
+            width: calc(100% - #{$sidebarWidth});
+        } */
+        &.hoffi-shift-left {
+            margin-right: $sidebarWidth;
             width: calc(100% - #{$sidebarWidth});
         }
     }
@@ -70,6 +74,15 @@
         position: relative;
         width: 100%;
         z-index: $toolbarZ;
+
+        /* Hoffi */
+        .button-group-left {
+            order: 3;
+            justify-content: flex-end;
+        }
+        .button-group-right {
+            order: -1;
+        }
 
         .button-group-center,
         .button-group-left,
@@ -146,7 +159,9 @@
         }
 
         .button-group-right {
-            justify-content: flex-end;
+            /* justify-content: flex-end; */
+            /* Hoffi */
+            justify-content: flex-start;
         }
 
         .overflow-menu {

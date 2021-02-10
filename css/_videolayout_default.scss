@@ -183,9 +183,15 @@
     }
 
     @media (min-width: 581px) {
-        &.shift-right {
+        /* &.shift-right {
             &#largeVideoContainer {
                 margin-left: $sidebarWidth;
+                width: calc(100% - #{$sidebarWidth});
+            }
+        } */
+        &.hoffi-shift-left {
+            &#largeVideoContainer {
+                margin-right: $sidebarWidth;
                 width: calc(100% - #{$sidebarWidth});
             }
         }

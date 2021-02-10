@@ -1,4 +1,7 @@
 .vertical-filmstrip .filmstrip {
+    /* Hoffi */
+    display: none;
+
     &.hide-videos {
         .remote-videos-container {
             opacity: 0;
@@ -47,6 +50,9 @@
      * Hide videos by making them slight to the right.
      */
     .filmstrip__videos {
+        /* Hoffi */
+        display: none;
+
         @extend %align-right;
         bottom: 0;
         padding: 0;

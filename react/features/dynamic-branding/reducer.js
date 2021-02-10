@@ -29,7 +29,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {string}
      */
-    backgroundImageUrl: '',
+    backgroundImageUrl: 'images/coffee_1.png', /* Hoffi */
 
     /**
      * Flag indicating that the logo (JitsiWatermark) can be displayed.
@@ -56,7 +56,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {boolean}
      */
-    defaultBranding: true,
+    defaultBranding: false, /* Hoffi */
 
     /**
      * The custom invite domain.
@@ -72,7 +72,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {string}
      */
-    logoClickUrl: '',
+    logoClickUrl: 'https://hoffi.io', /* Hoffi */
 
     /**
      * The custom logo (JitisWatermark).
@@ -80,7 +80,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {string}
      */
-    logoImageUrl: '',
+    logoImageUrl: 'images/hoffi_light.svg', /* Hoffi */
 
     /**
      * Flag used to signal if the app should use a custom logo or not
@@ -88,7 +88,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {boolean}
      */
-    useDynamicBrandingData: false
+    useDynamicBrandingData: true /* Hoffi */
 };
 
 /**

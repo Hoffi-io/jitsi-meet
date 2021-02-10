@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    left: -$sidebarWidth;
+    /* Hoffi */
+    right: -$sidebarWidth;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -17,7 +18,8 @@
      * side of the window when it should be visible.
      */
     &.slideInExt {
-        left: 0;
+        /* Hoffi */
+        right: 0;
     }
 }
 
