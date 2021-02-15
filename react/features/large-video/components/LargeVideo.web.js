@@ -121,11 +121,11 @@ class LargeVideo extends Component<Props> {
         const styles = {};
         const { _customBackgroundColor, _customBackgroundImageUrl } = this.props;
 
-        styles.backgroundColor = _customBackgroundColor || interfaceConfig.DEFAULT_BACKGROUND;
+//        styles.backgroundColor = _customBackgroundColor || interfaceConfig.DEFAULT_BACKGROUND;
 
-        if (_customBackgroundImageUrl ) {
+        if (interfaceConfig.DEFAULT_BACKGROUND) {
             /* Hoffi */
-            styles.backgroundImage = `linear-gradient(to bottom, rgba(14, 8, 33, 0.65) 0%, rgba(14, 8, 33, 0) 100%), url(${_customBackgroundImageUrl})`;
+            styles.backgroundImage = `linear-gradient(to bottom, rgba(14, 8, 33, 0.65) 0%, rgba(14, 8, 33, 0) 100%), url(${interfaceConfig.DEFAULT_BACKGROUND})`;
             styles.backgroundSize = 'cover';
         }
 

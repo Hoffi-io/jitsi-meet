@@ -29,7 +29,7 @@ const DEFAULT_STATE = {
      * @public
      * @type {string}
      */
-    backgroundImageUrl: 'images/coffee_1.png', /* Hoffi */
+    backgroundImageUrl: '', /* Hoffi */
 
     /**
      * Flag indicating that the logo (JitsiWatermark) can be displayed.
