@@ -40,8 +40,10 @@ MiddlewareRegistry.register(store => next => action => {
             ));
         }
 
-        if (typeof interfaceConfig === 'object'
-                && !interfaceConfig.DISABLE_FOCUS_INDICATOR && p.role === PARTICIPANT_ROLE.MODERATOR) {
+        /* Hoffi */
+        /* if (typeof interfaceConfig === 'object'
+                && !interfaceConfig.DISABLE_FOCUS_INDICATOR && p.role === PARTICIPANT_ROLE.MODERATOR) { */
+        if (false) {
             // Do not show the notification for mobile and also when the focus indicator is disabled.
             const displayName = getParticipantDisplayName(getState, p.id);
 
@@ -87,7 +89,9 @@ MiddlewareRegistry.register(store => next => action => {
         const oldParticipant = getParticipantById(state, id);
         const oldRole = oldParticipant?.role;
 
-        if (oldRole && oldRole !== role && role === PARTICIPANT_ROLE.MODERATOR) {
+        /* Hoffi */
+        /* if (oldRole && oldRole !== role && role === PARTICIPANT_ROLE.MODERATOR) { */
+        if (false) {
             const displayName = getParticipantDisplayName(state, id);
 
             store.dispatch(showNotification({
