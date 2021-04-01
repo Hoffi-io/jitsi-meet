@@ -13,7 +13,7 @@ git pull -X theirs origin master
 Sachant qu'on avait déjà lancé `npm update && npm install` et qu'Nginx pointe déjà vers _/home/abl/jitsi-meet_
 
 ```
-cd /var/lib/jitsi/
+cd /usr/share/jitsi
 npm install lib-jitsi-meet --force && make
 ```
 
@@ -32,7 +32,7 @@ sudo git config --global user.email <email>
 
 ```
 sudo chown abl:abl -R /home/abl
-git clone https://github.com/Hoffi-io/jitsi-meet-1 /var/lib/jitsi
+git clone https://github.com/Hoffi-io/jitsi-meet-1 /usr/share/jitsi
 ```
 
 - Installer une version récente de Node
@@ -49,7 +49,7 @@ nvm install v14.15.4
 - Faire un build de Jitsi Meet
 
 ```
-cd /var/lib/jitsi/
+cd /usr/share/jitsi
 npm update && npm install
 make all
 ```
@@ -57,21 +57,21 @@ make all
 - Faire un build de Lib Jitsi Meet
 
 ```
-cd /var/lib/jitsi
+cd /usr/share/jitsi
 git clone https://github.com/jitsi/lib-jitsi-meet.git
 
-sed -i 's&"lib-jitsi-meet": "github:jitsi/lib-jitsi-meet.*",&"lib-jitsi-meet": "file:../lib-jitsi-meet",&' /var/lib/jitsi/package.json
+sed -i 's&"lib-jitsi-meet": "github:jitsi/lib-jitsi-meet.*",&"lib-jitsi-meet": "file:../lib-jitsi-meet",&' /usr/share/jitsi/package.json
 
-cd /var/lib/jitsi/lib-jitsi-meet
+cd /usr/share/jitsi/lib-jitsi-meet
 npm update
 
-rm -rf /var/lib/jitsi/node_modules/lib-jitsi-meet && cd /var/lib/jitsi/ && npm install lib-jitsi-meet --force && make
+rm -rf /usr/share/jitsi/node_modules/lib-jitsi-meet && cd /usr/share/jitsi/ && npm install lib-jitsi-meet --force && make
 ```
 
 - Mettre à jour Nginx
 
 ```
-sudo sed -i 's&/usr/share/jitsi-meet&/var/lib/jitsi&' /etc/nginx/sites-available/meet.hoffi.io.conf
+sudo sed -i 's&/usr/share/jitsi-meet&/usr/share/jitsi&' /etc/nginx/sites-available/meet.hoffi.io.conf
 
 sudo service nginx restart
 ```
