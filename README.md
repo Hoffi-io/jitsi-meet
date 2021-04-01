@@ -13,7 +13,7 @@ git pull -X theirs origin master
 Sachant qu'on avait déjà lancé `npm update && npm install` et qu'Nginx pointe déjà vers _/home/abl/jitsi-meet_
 
 ```
-cd ~/jitsi-meet/
+cd /var/lib/jitsi/
 npm install lib-jitsi-meet --force && make
 ```
 
