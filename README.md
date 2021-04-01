@@ -32,7 +32,7 @@ sudo git config --global user.email <email>
 
 ```
 sudo chown abl:abl -R /home/abl
-git clone https://github.com/Hoffi-io/jitsi-meet-1 ~/jitsi-meet
+git clone https://github.com/Hoffi-io/jitsi-meet-1 /var/lib/jitsi
 ```
 
 - Installer une version récente de Node
@@ -49,7 +49,7 @@ nvm install v14.15.4
 - Faire un build de Jitsi Meet
 
 ```
-cd ~/jitsi-meet/
+cd /var/lib/jitsi/
 npm update && npm install
 make all
 ```
@@ -57,21 +57,21 @@ make all
 - Faire un build de Lib Jitsi Meet
 
 ```
-cd ~
+cd /var/lib/jitsi
 git clone https://github.com/jitsi/lib-jitsi-meet.git
 
-sed -i 's&"lib-jitsi-meet": "github:jitsi/lib-jitsi-meet.*",&"lib-jitsi-meet": "file:../lib-jitsi-meet",&' ~/jitsi-meet/package.json
+sed -i 's&"lib-jitsi-meet": "github:jitsi/lib-jitsi-meet.*",&"lib-jitsi-meet": "file:../lib-jitsi-meet",&' /var/lib/jitsi/package.json
 
-cd ~/lib-jitsi-meet
+cd /var/lib/jitsi/lib-jitsi-meet
 npm update
 
-rm -rf ~/jitsi-meet/node_modules/lib-jitsi-meet && cd ~/jitsi-meet/ && npm install lib-jitsi-meet --force && make
+rm -rf /var/lib/jitsi/node_modules/lib-jitsi-meet && cd /var/lib/jitsi/ && npm install lib-jitsi-meet --force && make
 ```
 
 - Mettre à jour Nginx
 
 ```
-sudo sed -i 's&/usr/share/jitsi-meet&/home/abl/jitsi-meet&' /etc/nginx/sites-available/meet-dev.hoffi.io.conf
+sudo sed -i 's&/usr/share/jitsi-meet&/var/lib/jitsi&' /etc/nginx/sites-available/meet.hoffi.io.conf
 
 sudo service nginx restart
 ```
