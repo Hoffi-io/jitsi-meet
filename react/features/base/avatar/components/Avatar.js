@@ -89,7 +89,7 @@ class Avatar<P: Props> extends PureComponent<P, State> {
      * @static
      */
     static defaultProps = {
-        dynamicColor: true
+        dynamicColor: false
     };
 
     /**
