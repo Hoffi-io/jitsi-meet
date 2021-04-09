@@ -7,6 +7,7 @@
 Prendre la version récente d'Hoffi Jitsi Meet
 
 ```
+cd /usr/share/jitsi
 git pull -X theirs origin master
 ```
 
