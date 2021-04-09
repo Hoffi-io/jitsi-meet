@@ -171,9 +171,13 @@ class Avatar<P: Props> extends PureComponent<P, State> {
         const initials = getInitials(_initialsBase);
 
         if (initials) {
+            // Hoffi
             if (dynamicColor) {
-                avatarProps.color = getAvatarColor(colorBase || _initialsBase);
+                avatarProps.color = 'transparent';
             }
+            // if (dynamicColor) {
+            //     avatarProps.color = getAvatarColor(colorBase || _initialsBase);
+            // }
 
             avatarProps.initials = initials;
         }
