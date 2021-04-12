@@ -525,7 +525,9 @@
     top: 50px;
     margin: auto;
     position: relative;
-    overflow: hidden;
+    /* Hoffi */
+    overflow: visible;
+    /* overflow: hidden; */
     visibility: inherit;
 }
 
